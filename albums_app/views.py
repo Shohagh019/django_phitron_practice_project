@@ -1,4 +1,11 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from .forms import AlbumForm
 def album(request):
-    return render(request, 'album.html')
+    if request.method == 'POST':
+        form = AlbumForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('album')
+    else:
+        form = AlbumForm()        
+    return render(request, 'album.html', {'form': form})

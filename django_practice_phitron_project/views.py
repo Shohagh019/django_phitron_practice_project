@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from musicians_app.models import Musician
 # Create your views here.
 def home(request):
-    return render(request, 'base.html')
+    data = Musician.objects.all()
+    return render(request, 'base.html', {'data': data})
