@@ -1,14 +1,14 @@
 from django import forms
 from . models import Musician
 instruments = [
-    ('g', 'Guitar'),
-    ('p', 'Piano'),
-    ('d', 'Drums'),
-    ('v', 'Violin'),
-    ('f', 'Flute'),
-    ('s', 'Saxophone'),
-    ('c', 'Cello'),
-    ('t', 'Trumpet')
+    ('Guitar', 'Guitar'),
+    ('Piano', 'Piano'),
+    ('Drums', 'Drums'),
+    ('Violin', 'Violin'),
+    ('Flute', 'Flute'),
+    ('Saxophone', 'Saxophone'),
+    ('Cello', 'Cello'),
+    ('Trumpet', 'Trumpet')
 ]
 class MusicianForm(forms.ModelForm):
     class Meta:
